@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东轮播图</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        .swiper {
+            width: 590px;
+            height: 470px;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        .swiper li {
+            position: absolute;
+        }
+
+        /* 通过修改元素的层级来显示指定的图片 */
+        .swiper li:nth-child(3) {
+            z-index: 1;
+        }
+
+        .pointer {
+            position: absolute;
+            z-index: 9999;
+            left: 40px;
+            bottom: 20px;
+        }
+
+        .pointer a {
+            float: left;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 4px;
+            background-color: rgba(255, 255, 255, .3);
+        }
+
+        .pointer .active,
+        .pointer a:hover {
+            background-color: #fff;
+            outline: 3px solid rgba(255, 255, 255, .3);
+        }
+    </style>
+</head>
+<body>
+    <ul class="swiper">
+        <li><a href="#"><img src="./img/05/1.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./img/05/2.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./img/05/3.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./img/05/4.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./img/05/5.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./img/05/6.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./img/05/7.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./img/05/8.jpg" alt=""></a></li>
+        <div class="pointer">
+            <a href="#"></a>
+            <a href="#"></a>
+            <a class="active" href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+    </ul>
+</body>
+</html>
